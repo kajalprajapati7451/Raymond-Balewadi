@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raymond Balewadi — Luxury Residences | Coming Soon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ════════════════════════════ -->
+  <nav class="rb-navbar" id="mainNav">
+    <div class="rb-nav-inner">
+      <a href="#" class="rb-logo">
+        <span class="logo-r">R</span>aymond <span class="logo-accent">Balewadi</span>
+      </a>
+
+      <ul class="rb-nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#countdown">Launch</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn-nav-cta">Enquire Now</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE DRAWER ═════════════════════ -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="mobile-logo">
+      <span class="logo-r">R</span>aymond <span class="logo-accent">Balewadi</span>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero"       class="menu-link">Home</a></li>
+      <!-- <li><a href="#highlights" class="menu-link">Highlights</a></li>
+      <li><a href="#countdown"  class="menu-link">Launch</a></li> -->
+      <li><a href="#contact"    class="menu-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta menu-link">Enquire Now →</a>
+  </div>
+
+  <!-- ═══ HERO SECTION ═════════════════════ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container">
+      <div class="hero-row">
+
+        <!-- LEFT: Copy -->
+        <div class="hero-left">
+          <div class="coming-soon-badge">
+            <span class="badge-dot"></span> Coming Soon
+          </div>
+          <h1 class="hero-title">Raymond<br/><em>Balewadi</em></h1>
+          <p class="hero-tagline">
+            Ultra-Luxury 3 &amp; 4 BHK Residences<br/>
+            at Balewadi, Pune's Most Coveted Address
+          </p>
+          <div class="hero-price-badge">
+            Starting From <strong>₹ 2.5 Cr*</strong>
+          </div>
+          <ul class="hero-bullets">
+            <li><i class="fa-solid fa-check"></i> RERA Approved Project</li>
+            <li><i class="fa-solid fa-check"></i> 40+ World-Class Amenities</li>
+            <li><i class="fa-solid fa-check"></i> Premium Location · Near Baner &amp; Hinjewadi</li>
+          </ul>
+          <div class="hero-btns">
+            <a href="#contact" class="btn-primary-cta">Get Cost Sheet</a>
+            <a href="#contact" class="btn-secondary-cta">Book Site Visit</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="hero-right">
+          <div class="lead-form-card">
+            <p class="form-eyebrow">Register Your Interest</p>
+            <h3 class="form-title">Get Exclusive Details</h3>
+            <div class="form-divider"></div>
+            <div class="mb-3">
+              <input type="text" class="rb-input" placeholder="Your Full Name" required/>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="rb-input" placeholder="Mobile Number" required/>
+            </div>
+            <div class="mb-3">
+              <select class="rb-input rb-select">
+                <option value="" disabled selected>I'm Interested In…</option>
+                <option>Site Visit</option>
+                <option>Cost Sheet</option>
+                <option>Floor Plan</option>
+              </select>
+            </div>
+            <button type="button" class="btn-form-submit" onclick="handleFormSubmit(this)">
+              Get Cost Sheet &rarr;
+            </button>
+            <p class="form-privacy">
+              <i class="fa-solid fa-lock"></i> 100% Privacy Guaranteed. No Spam.
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HIGHLIGHTS STRIP ══════════════════
+  <section class="highlights-strip" id="highlights">
+    <div class="container">
+      <div class="row g-0 text-center">
+        <div class="col-6 col-md-3 highlight-item fade-in">
+          <span class="hi-number">3 &amp; 4</span>
+          <span class="hi-label">BHK Configurations</span>
+        </div>
+        <div class="col-6 col-md-3 highlight-item fade-in">
+          <span class="hi-number">40+</span>
+          <span class="hi-label">Premium Amenities</span>
+        </div>
+        <div class="col-6 col-md-3 highlight-item fade-in">
+          <span class="hi-number">2025</span>
+          <span class="hi-label">Possession Year</span>
+        </div>
+        <div class="col-6 col-md-3 highlight-item fade-in">
+          <span class="hi-number">G+25</span>
+          <span class="hi-label">Tower Floors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="countdown-section" id="countdown">
+    <div class="container text-center">
+      <p class="section-eyebrow">Official Launch</p>
+      <h2 class="section-heading">Something Magnificent<br/><em>Is Coming</em></h2>
+      <p class="section-subtext">Be among the first to receive exclusive pre-launch pricing and floor plan access.</p>
+      <div class="countdown-wrap" id="countdown-wrap">
+        <div class="cd-block fade-in"><span id="cd-days">00</span><label>Days</label></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block fade-in"><span id="cd-hours">00</span><label>Hours</label></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block fade-in"><span id="cd-mins">00</span><label>Minutes</label></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block fade-in"><span id="cd-secs">00</span><label>Seconds</label></div>
+      </div>
+      
+    </div>
+  </section> -->
+
+  <!-- ═══ CONTACT SECTION ══════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center mb-5">
+          <p class="section-eyebrow">Contact Us</p>
+          <!-- <h2 class="section-heading">Speak with Our<br/><em>Property Expert</em></h2> -->
+          <!-- <p class="section-subtext">Fill the form and we'll reach out within minutes with exclusive details.</p> -->
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="contact-form-card fade-in">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="rb-input" placeholder="Full Name" required/>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" class="rb-input" placeholder="Mobile Number" required/>
+              </div>
+              <div class="col-12">
+                <select class="rb-input rb-select">
+                  <option value="" disabled selected>Enquiry Type</option>
+                  <option>Site Visit</option>
+                  <option>Cost Sheet</option>
+                  <option>Floor Plan</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea class="rb-input rb-textarea" placeholder="Your Message (Optional)" rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn-form-submit" onclick="handleFormSubmit(this)">
+                  Book Site Visit &rarr;
+                </button>
+                <p class="form-privacy text-center mt-2">
+                  <i class="fa-solid fa-lock"></i> Your information is safe with us.
+                  <a href="#">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════ -->
+  <footer class="rb-footer">
+    <div class="container text-center">
+      <p class="footer-rera">RERA No: <strong>P52100012345</strong> &nbsp;|&nbsp; This is a channel partner website. All bookings subject to developer T&amp;C.</p>
+      <p class="footer-copy">&copy; <span id="year"></span> Raymond Balewadi. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ═══ MOBILE STICKY BAR ════════════════ -->
+  <div class="mobile-sticky-bar d-lg-none">
+    <a href="tel:+919999999999" class="sticky-btn sticky-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919999999999" target="_blank" class="sticky-btn sticky-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#contact" class="sticky-btn sticky-enquire">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Enquire</span>
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
